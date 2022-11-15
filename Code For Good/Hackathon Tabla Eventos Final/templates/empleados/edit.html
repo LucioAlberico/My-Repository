@@ -1,0 +1,59 @@
+{% include 'header.html' %}
+Formulario para editar
+{% for empleado in empleados %}
+<!--ID
+{{empleado[0]}}
+Nombre
+{{empleado[1]}}
+<!--Correo
+{{empleado[2]}}
+<!--Foto
+{{empleado[3]}}
+ESTO IMPRIME EL FORMULARIO-->
+<form method="post" action="/update" enctype="multipart/form-data">
+    <div class="card">
+        <div class="card-header">
+            Editar Informe
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Datos del Imforme</h5>
+            <p class="card-text">
+
+                <div class="form-group">
+                    <label for="txtNombre">Resumen:</label>
+                    <input id="txtNombre" class="form-control" type="text" name="txtNombre">
+                </div>
+    
+                <div class="form-group">
+                    <label for="txtApellido">Estado Alerta:</label>
+                    <input id="txtApellido" class="form-control" type="text" name="txtApellido">
+                </div>
+    
+                <div class="form-group">
+                    <label for="txtCorreo">Localidad:</label>
+                    <input id="txtCorreo" class="form-control" type="text" name="txtCorreo">
+                </div>
+    
+                <div class="form-group">
+                    <label for="txtTipo">Tipo:</label>
+                    <input id="txtTipo" class="form-control" type="text" name="txtTipo">
+                </div>
+    
+                <div class="form-group">
+                    <label for="txtFoto">Foto:</label>
+                    <input id="txtFoto" class="form-control" type="file" name="txtFoto">
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-success" value="Agregar">
+                    <a href="{{url_for('index')}}" class="btn btn-primary">Regresar</a>
+                </div>
+
+            </p>
+        </div>
+    </div>
+
+
+</form>
+
+{% endfor %}
+{% include 'footer.html' %}

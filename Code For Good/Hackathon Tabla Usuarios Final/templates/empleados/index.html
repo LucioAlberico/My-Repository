@@ -1,0 +1,50 @@
+{% include 'header.html' %}
+<br />
+<a href="{{url_for('create')}}" class="btn-success">
+    Ingresar nuevo empleado
+</a>
+<br>
+<br>
+
+<table class="table table-light">
+    <thead class="thead-light">
+        <tr>
+            <th>#</th>
+            <th>Foto</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Correo</th>
+            <th>Tipo</th>
+            <!--acciones va porq es un crud es lo editar eliminar-->
+            <th>Acciones</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for empleado in empleados %}
+
+
+        <tr>
+            <!--Misma cantidad de tds como de ths-->
+            <td>{{empleado[0]}}</td>
+            <td>
+                <img class="img-thumbnails" width="100" src="uploads/{{empleado[5]}}" alt="">
+            </td>
+
+            <td>{{empleado[1]}}</td>
+            <td>{{empleado[2]}}</td>
+            <td>{{empleado[3]}}</td>
+            <td>{{empleado[4]}}</td>
+            <!-- envian la info a sus correspondientes routes-->
+            <td><a class="btn btn-warning" href="/edit/{{empleado[0]}}">Editar</a>
+                |
+                <!-- alerta cuando uno quiere borrar un dato-->
+                <a onclick="return confirm('¿Desea borrar el registro?')" class="btn btn-danger"
+                    href="/destroy/{{empleado[0]}}">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% include 'footer.html' %}
