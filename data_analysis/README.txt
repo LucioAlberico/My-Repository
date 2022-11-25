@@ -1,1 +1,0 @@
-For this project I cleaned, analyzed and visualizated the data of the btc and eth market price using Numpy, Pandas, Matplotlib, Seaborn and Jupyter Notebook as my IDE.
