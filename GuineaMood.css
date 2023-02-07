@@ -1,0 +1,36 @@
+.foto{
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0px;
+  height: 508px;
+  width: 900px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.center{
+  text-align: center;
+  font-family: 'Josefin Slab', georgia, serif;
+  font-size: 40px;
+  font-weight:normal;
+  line-height:100%;
+  margin-bottom: 16px;
+  margin-top: 0px;
+  text-shadow: 0px -1px 2px #ccc;
+}
+.botones{
+  text-align: center;
+}
+.botonescu{
+  font-family: "Arial", Helvetica, sans-serif;
+  font-size: 15px;
+  margin-right: 30px;
+  height: 25px;
+  width: 80px;
+}
+body{
+  background-image: url('guinea.gif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
